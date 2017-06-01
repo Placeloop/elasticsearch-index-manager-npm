@@ -1,0 +1,27 @@
+{
+    "settings" : {
+      "index" : {
+            "number_of_shards" : 6, 
+            "number_of_replicas" : 2,
+            "mapper" : {
+              "dynamic" : false
+            }
+        }
+    },
+    "mappings" : {
+      "data" : {
+        "dynamic":"strict",
+        "properties" : {
+          "content" : {
+            "type" : "text",
+            "analyzer" :"standard",
+            "fields" : {
+              "raw" : {
+                "type" : "keyword"
+              }
+            }
+          }
+        }
+      }
+    }
+}

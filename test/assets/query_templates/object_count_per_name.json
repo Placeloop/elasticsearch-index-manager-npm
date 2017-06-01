@@ -1,0 +1,16 @@
+{
+  "template" : {
+    "query": {
+      "bool" : {
+        "must" : [
+          { "term" : { "name" : "{{name}}" } }
+        ]
+      }
+    },
+    "sort" :  { 
+      "name" : {"order" : "{{order}}{{^order}}0{{/order}}"}
+    },
+    "from" : "{{from}}{{^from}}0{{/from}}",
+    "size" : "{{size}}{{^size}}20{{/size}}"
+  }
+}
