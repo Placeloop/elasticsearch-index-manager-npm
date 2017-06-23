@@ -21,21 +21,12 @@
               }
             }
           },
-          "info_3" : {
+          "info" : {
             "type" : "text",
             "analyzer" :"standard",
             "fields" : {
               "raw" : {
-                "type" : "date"
-              }
-            }
-          },
-          "info_4" : {
-            "type" : "text",
-            "analyzer" :"standard",
-            "fields" : {
-              "raw" : {
-                "type" : "date"
+                "type" : "keyword"
               }
             }
           }
