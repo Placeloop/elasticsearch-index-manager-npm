@@ -20,6 +20,24 @@
                 "type" : "keyword"
               }
             }
+          },
+          "info_3" : {
+            "type" : "text",
+            "analyzer" :"standard",
+            "fields" : {
+              "raw" : {
+                "type" : "date"
+              }
+            }
+          },
+          "info_4" : {
+            "type" : "text",
+            "analyzer" :"standard",
+            "fields" : {
+              "raw" : {
+                "type" : "date"
+              }
+            }
           }
         }
       }
