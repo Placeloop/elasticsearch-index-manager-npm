@@ -1,6 +1,6 @@
 {
   "name": "elasticsearch-index-manager",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Elasticsearch toolbox to handle a proposed index lifecycle ... smoothly!",
   "main": "index.js",
   "bin": "./bin.js",
