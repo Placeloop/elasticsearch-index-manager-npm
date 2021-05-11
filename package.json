@@ -1,11 +1,14 @@
 {
   "name": "elasticsearch-index-manager",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Elasticsearch toolbox to handle a proposed index lifecycle ... smoothly!",
   "main": "index.js",
   "bin": "./bin.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "depcheck": "depcheck",
+    "outdated": "sh -c 'exit $(yarn outdated --json 2> /dev/null | format-yarn-outdated --excludes=outdated.yml --format csv 2> /dev/null | grep . | grep -v \"^yarn run\" | grep -v \"^\\$ \" | grep -v \"^Done in\" | column -s, -t | tee /dev/stderr | grep -v \"Version Change\" | wc -l)'",
+    "audit": "improved-yarn-audit --min-severity high --fail-on-missing-exclusions --ignore-dev-deps"
   },
   "repository": {
     "type": "git",
@@ -23,11 +26,16 @@
   },
   "homepage": "https://github.com/Placeloop/elasticsearch-index-manager-npm#readme",
   "dependencies": {
-    "bluebird": "3.5.0",
-    "clone": "2.1.1",
-    "elasticsearch": "13.2.0",
-    "minimist": "1.2.0",
-    "rimraf": "2.6.1",
+    "bluebird": "3.7.2",
+    "clone": "2.1.2",
+    "elasticsearch": "15.0.0",
+    "minimist": "1.2.5",
+    "rimraf": "3.0.2",
     "stdin": "0.0.1"
+  },
+  "devDependencies": {
+    "depcheck": "1.4.0",
+    "yarn-outdated-formatter": "3.0.0",
+    "improved-yarn-audit": "2.3.2"
   }
 }
