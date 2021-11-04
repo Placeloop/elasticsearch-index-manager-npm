@@ -1,6 +1,6 @@
 {
   "name": "elasticsearch-index-manager",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "Elasticsearch toolbox to handle a proposed index lifecycle ... smoothly!",
   "main": "index.js",
   "bin": "./bin.js",
@@ -23,11 +23,10 @@
   },
   "homepage": "https://github.com/Placeloop/elasticsearch-index-manager-npm#readme",
   "dependencies": {
-    "bluebird": "3.5.0",
-    "clone": "2.1.1",
-    "elasticsearch": "13.2.0",
-    "minimist": "1.2.0",
-    "rimraf": "2.6.1",
+    "clone": "2.1.2",
+    "@elastic/elasticsearch": "7.15.0",
+    "minimist": "1.2.5",
+    "rimraf": "3.0.2",
     "stdin": "0.0.1"
   }
 }
